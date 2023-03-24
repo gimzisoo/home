@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M BOOST 발급 이벤트</title>
+</head>
+<style>
+    @import url('https://www.hyundaicard.com/css/common_web.css?t=050000');
+    @font-face {
+    font-family: 'YouandiModernTR';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/YouandiModernTR.eot);
+    src: url(../font/YouandiModernTR.eot?#iefix) format('embedded-opentype'),
+         url(../font/YouandiModernTR.woff) format('woff'),
+         url(../font/YouandiModernTR.ttf) format('opentype');
+    }
+    @font-face {
+	font-family: 'YouandiModernTR';
+	font-style: normal;
+	font-weight: normal;
+	src: url(https://img.hyundaicard.com/font/YouandiModernTR.eot);
+	src: url(https://img.hyundaicard.com/font/YouandiModernTR.eot?#iefix) format('embedded-opentype'),
+         url(https://img.hyundaicard.com/font/YouandiModernTR.woff) format('woff'),
+         url(https://img.hyundaicard.com/font/YouandiModernTR.ttf) format('opentype');
+    }
+    
+
+    body { margin:0;padding:0;background-color:#000; }
+    li { list-style:none; }
+    em { font-style:normal; }
+    p { margin:0;padding:0; }
+
+    .blue { color:#0082cb; }
+    .mrg30 { margin-top:30px; }
+
+    .contWrap { margin:0 auto;padding-bottom:100px;width:640px;font-family:'YouandiModernTR';font-weight:normal;text-align:center;color:#fff;overflow:hidden; }
+
+    .contWrap .contTop { padding-top:20px; }
+    .contWrap .contTop h1 { margin:0;padding:0; }
+    .contWrap .contTop h1 img { display:block;margin:0 auto; }
+    .contWrap .contTop .main-txt { margin-top:40px; }
+    .contWrap .contTop .main-txt .bold-txt { font-size:36px;line-height:48px; }
+    .contWrap .contTop .main-txt .light-txt { font-size:30px;line-height:48px; }
+    .contWrap .contTop .main-img { position:relative;height:466px; }
+    .contWrap .contTop .main-img div { position:absolute;top:35px;left:50%;margin-left:-125px;width:250px;height:395px; }
+    .contWrap .contTop .main-img div { opacity:0;transition: opacity .5s, transform .8s;transition-timing-function: ease; }
+    .contWrap .contTop .main-img .front-img { z-index:1; }
+    .contWrap.active .contTop .main-img .front-img { transition-delay:.3s;opacity:1;transform:translateX(-125px) }
+    .contWrap.active .contTop .main-img .back-img { transition-delay:.3s;opacity:1;transform:translateX(125px) }
+    .contWrap .contTop .sub-txt { margin:0 auto;width:500px; }
+    .contWrap .contTop .sub-txt p { text-align:left;font-size:24px;line-height:38px; }
+    .contWrap .contTop .sub-txt p em { font-size:28px; }
+    .contWrap .contTop .sub-txt .term-txt { font-size:16px;line-height:70px; }
+
+    .contWrap .contBot { margin-top:100px; }
+    .contWrap .contBot .main-txt { margin:0 auto;padding:0 20px;width:600px; }
+    .contWrap .contBot .main-txt p { text-align:left;font-size:50px;font-weight:bold;line-height:64px; } 
+    .contWrap .contBot .step-wrap { margin-top:90px; }
+    .contWrap .contBot .step-wrap li+li { margin-top:122px; }
+    .contWrap .contBot .step-wrap li { position:relative; }
+    .contWrap .contBot .step-wrap li:nth-child(1):after { content:'';position:absolute;bottom:-61px;left:50%;margin-left:-22px;width:44px;height:22px;background-image:url("/Users/jisu/포트폴리오/img/arrow.png"); }
+    .contWrap .contBot .step-wrap li:nth-child(2):after { content:'';position:absolute;bottom:-61px;left:50%;margin-left:-22px;width:44px;height:22px;background-image:url("/Users/jisu/포트폴리오/img/arrow.png"); }
+    .contWrap .contBot .step-wrap span { display:block;margin:0 auto;width:150px;height:40px;font-size:18px;line-height:40px;border:2px solid #fff;border-radius:10px; }
+    .contWrap .contBot .step-wrap p { font-size:30px;line-height:40px; }
+    .contWrap .contBot .step-wrap .mid { font-size:24px; }
+    .contWrap .contBot .step-wrap .small { font-size:16px; }
+   
+    .contWrap .contBot .design-wrap { margin-top:150px; }
+    .contWrap .contBot .design-wrap p { font-size:42px;line-height:48px; }
+    .contWrap .contBot .design-wrap .light-txt { font-size:34px; }
+    .contWrap .contBot .design-wrap .card-wrap { margin-top:100px; }
+    .contWrap .contBot .design-wrap .card-wrap ul { position:relative;margin:0 auto;padding:0;width:490px;height:260px;box-sizing:border-box; } 
+    .contWrap .contBot .design-wrap .card-wrap li { position:relative;display:block;float:left;width:150px;height:260px; }
+    .contWrap .contBot .design-wrap .card-wrap li a { position:absolute;top:0;left:0;right:0;bottom:0; }
+    .contWrap .contBot .design-wrap .card-wrap li+li { margin-left:20px; }
+    .contWrap .contBot .design-wrap .card-wrap li div { width:150px;height:236px; }
+    .contWrap .contBot .design-wrap .card-wrap li div img { display:block;width:100%;height:auto; }
+    .contWrap .contBot .design-wrap .card-wrap li p { margin-top:8px;font-size:16px;line-height:16px; }
+
+    .contWrap .contBot .design-wrap .bnf-wrap { margin-top:150px; }
+    .contWrap .contBot .design-wrap .bnf-wrap li { text-align:left; }
+    .contWrap .contBot .design-wrap .bnf-wrap li+li { margin-top:100px; }
+    .contWrap .contBot .design-wrap .bnf-wrap .right { text-align:right; }
+    .contWrap .contBot .design-wrap .bnf-wrap p { font-size:42px;line-height:48px; }
+    .contWrap .contBot .design-wrap .bnf-wrap .small { font-size:30px; }
+
+    .contWrap .notice-wrap { margin:150px 20px 0;text-align:left; }
+    .contWrap .notice-wrap h2 { font-size:36px;line-height:48px; }
+    .contWrap .notice-wrap li { font-size:18px;line-height:28px; }
+
+    .contWrap .btn-wrap { position:fixed;left:0;bottom:0;width:100%;height:70px; }
+    .contWrap .btn-wrap ul { margin:0 auto;padding:0;width:100%;height:70px; }
+    .contWrap .btn-wrap ul li { float:left;width:50%;height:70px;background-color:#555; }
+    .contWrap .btn-wrap li:nth-child(2) { background-color:#0082cb; }
+    .contWrap .btn-wrap li a { display:block;line-height:70px;font-size:28px;color:rgba(255,255,255,0.8);text-decoration:none; }
+
+    .contInfo { position:fixed;top:50%;left:50%;display:none;margin:-240px 0 0 -150px;width:300px;height:480px;font-family:'YouandiModernTR';font-weight:normal;border-radius:20px;background-color:#fff; }
+    .contInfo a { z-index:100;position:absolute;top:0;left:0;right:0;bottom:0; }
+    .contInfo.on { display:block; }
+    .contInfo ul { position:relative;margin:0;padding:0; }
+    .contInfo ul li { position:absolute;top:0;left:0;display:none;padding:20px 10px;width:300px;height:480px;box-sizing:border-box; }
+    .contInfo ul li.on { display:block; }
+    .contInfo .card-img { margin:0 auto;width:150px;height:236px; }
+    .contInfo .card-img img { display:block;width:100%; }
+    .contInfo .name-txt { margin-top:10px;line-height:28px;font-size:18px;text-align:center; }
+    .contInfo .info-txt { margin-top:10px;line-height:24px;font-size:14px; }
+
+    @media (max-width: 640px) {
+    .contWrap { padding:0 0 50 0 !important;width:320px; }
+
+    .contWrap .contTop { padding-top:10px; }
+    .contWrap .contTop .main-txt { margin-top:20px; }
+    .contWrap .contTop .main-txt .bold-txt { font-size:18px;line-height:24px; }
+    .contWrap .contTop .main-txt .light-txt { font-size:15px;line-height:24px; }
+    .contWrap .contTop .main-img { height:233px; }
+    .contWrap .contTop .main-img div { top:18px;left:50%;margin-left:-62.5px;width:125px;height:197.5px; }
+    .contWrap .contTop .main-img div img { display: block;width:100%; }
+    .contWrap.active .contTop .main-img .front-img { transition-delay:.3s;opacity:1;transform:translateX(-62.5px) }
+    .contWrap.active .contTop .main-img .back-img { transition-delay:.3s;opacity:1;transform:translateX(62.5px) }
+    .contWrap .contTop .sub-txt { width:250px; }
+    .contWrap .contTop .sub-txt p { font-size:12px;line-height:19px; }
+    .contWrap .contTop .sub-txt p em { font-size:14px; }
+    .contWrap .contTop .sub-txt .term-txt { font-size:8px;line-height:35px; }
+
+    .contWrap .contBot { margin-top:50px; }
+    .contWrap .contBot .main-txt { padding:0 10px;width:300px; }
+    .contWrap .contBot .main-txt p { font-size:25px;line-height:63px; } 
+    .contWrap .contBot .step-wrap { margin-top:45px; }
+    .contWrap .contBot .step-wrap ul { margin:0;padding:0; }
+    .contWrap .contBot .step-wrap li+li { margin-top:60px; }
+    .contWrap .contBot .step-wrap li { position:relative; }
+    .contWrap .contBot .step-wrap li:nth-child(1):after { content:'';position:absolute;bottom:-30px;left:50%;margin-left:-11px;width:22px;height:11px;background-image:url("/Users/jisu/포트폴리오/img/arrow.png");background-size:100%; }
+    .contWrap .contBot .step-wrap li:nth-child(2):after { content:'';position:absolute;bottom:-30px;left:50%;margin-left:-11px;width:22px;height:11px;background-image:url("/Users/jisu/포트폴리오/img/arrow.png");background-size:100%; }
+    .contWrap .contBot .step-wrap span { display:block;margin:0 auto;width:75px;height:20px;font-size:9px;line-height:20px;border:1px solid #fff;border-radius:5px; }
+    .contWrap .contBot .step-wrap p { font-size:15px;line-height:20px; }
+    .contWrap .contBot .step-wrap .mid { font-size:12px; }
+    .contWrap .contBot .step-wrap .small { font-size:8px; }
+   
+    .contWrap .contBot .design-wrap { margin-top:75px; }
+    .contWrap .contBot .design-wrap p { font-size:21px;line-height:24px; }
+    .contWrap .contBot .design-wrap .light-txt { font-size:17px; }
+    .contWrap .contBot .design-wrap .card-wrap { margin-top:50px; }
+    .contWrap .contBot .design-wrap .card-wrap ul { width:245px;height:125px;box-sizing:border-box; } 
+    .contWrap .contBot .design-wrap .card-wrap li { width:75px;height:130px; }
+    .contWrap .contBot .design-wrap .card-wrap li+li { margin-left:10px; }
+    .contWrap .contBot .design-wrap .card-wrap li div { width:75px;height:118px; }
+    .contWrap .contBot .design-wrap .card-wrap li p { margin-top:4px;font-size:8px;line-height:8px; }
+
+    .contWrap .contBot .design-wrap .bnf-wrap { margin:75px 10px 0; }
+    .contWrap .contBot .design-wrap .bnf-wrap ul { margin:0;padding:0; }
+    .contWrap .contBot .design-wrap .bnf-wrap li+li { margin-top:50px; }
+    .contWrap .contBot .design-wrap .bnf-wrap p { font-size:21px;line-height:24px; }
+    .contWrap .contBot .design-wrap .bnf-wrap .small { font-size:15px; }
+
+    .contWrap .notice-wrap { margin:75px 10px 0; }
+    .contWrap .notice-wrap h2 { font-size:18px;line-height:24px; }
+    .contWrap .notice-wrap li { font-size:9px;line-height:14px; }
+
+    .contWrap .btn-wrap { height:35px; }
+    .contWrap .btn-wrap ul { height:35px; }
+    .contWrap .btn-wrap ul li { height:35px; }
+    .contWrap .btn-wrap li a { line-height:70px;font-size:14px; }
+    }
+</style>
+
+<body>
+    <div class="contWrap">
+        <!-- 이벤트 상단 -->
+        <div class="contTop">
+            <!-- 현대카드 로고 -->
+            <h1><img src="/Users/jisu/포트폴리오/img/logo.gif" alt="logo"></h1>
+            <!-- 타이틀 텍스트 -->
+            <div class="main-txt">
+                <p class="bold-txt" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">어디서나 M포인트 적립받는 카드</p>
+                <p class="light-txt" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"><em class="blue">M BOOST</em> by Hyundai Card</p>
+            </div>
+            <!-- 카드 이미지 -->
+            <div class="main-img">
+                <div class="front-img">
+                    <img src="/Users/jisu/포트폴리오/img/front.png" alt="앞면">
+                </div>
+                <div class="back-img">
+                    <img src="/Users/jisu/포트폴리오/img/back.png" alt="뒷면">
+                </div>
+            </div>
+            <!-- 서브 타이틀 텍스트 -->
+            <div class="sub-txt" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                <p>지금 <em class="blue">응모</em>하면, <br/>받을 수 있는 <em class="blue">혜택</em></p>
+                <p class="term-txt blue">2023.03.01 ~ 03.31</p>
+            </div>
+        </div>
+
+        <!-- 이벤트 내용 -->
+        <div class="contBot">
+            <div class="main-txt" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-once="true" data-aos-duration="1000">
+                <p>정확하고</p>
+                <p>확실하게</p>
+                <p>혜택받는 방법</p>
+            </div>
+            <!-- 참여방법 -->
+            <div class="step-wrap">
+                <ul>
+                    <li data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <span>STEP 01</span>
+                        <p class="mid mrg30">2023. 03. 01 ~ 03. 31 기간 내</p>
+                        <p> 하단 [응모하기] 버튼 클릭하여 <br/>이벤트 응모</p>
+                        <p class="small blue">* 직전 6개월간 본인 명의 현대카드 결제이력 없을 시 응모 가능</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"  data-aos-duration="1000">
+                        <span>STEP 02</span>
+                        <p class="mrg30">M BOOST 카드 기간 내 <br/>30만원 이상 사용!</p>
+                        <p class="small blue">* 홈페이지에서 발급받은 카드만 가능</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000">
+                        <span>STEP 03</span>
+                        <p class="mrg30">5웖 말 LMS로 혜택 받기</p>
+                        <p class="small blue">* 상세 내용은 하단 유의사항 참고</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 디자인 목록 -->
+            <div class="design-wrap" data-aos="fade-up" data-aos-duration="1000">
+                <div class="main-txt">
+                    <p class="light-txt">내 맘대로 고르는</p>
+                    <p class="bold-txt">M BOOST 디자인</p>
+                </div>
+                <!-- 이미지 목록 -->
+                <div class="card-wrap">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);" onclick="showInfo(1)"></a>
+                            <div><img src="/Users/jisu/포트폴리오/img/card01.png" alt="M Fluffy"></div>
+                            <p>M Fluffy</p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="showInfo(2)"></a>
+                            <div><img src="/Users/jisu/포트폴리오/img/card02.png" alt="M Charger"></div>
+                            <p>M Charger</p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="showInfo(3)"></a>
+                            <div><img src="/Users/jisu/포트폴리오/img/card03.png" alt="M Steel"></div>
+                            <p>M Steel</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 기본 혜택 -->
+                <div class="bnf-wrap">
+                    <ul>
+                        <li class="right" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"> 
+                            <p>기본적립</p>
+                            <p class="small">업종별 0.5 ~ 3% 적립</p>
+                            <p class="small">업종별 0.5 ~ 3% 적립</p>
+                            <div><img src="" alr="기본적립"></div>
+                        </li>
+                        <li data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"> 
+                            <p>5% 적립</p>
+                            <p class="small">온라인 간편결제, 해외 가맹점 당월 이용금액</p>
+                            <p class="small">50만원 이상 시 최대 1만 M포인트 적립</p>
+                            <div><img src="" alr="5% 적립"></div>
+                        </li>
+                        <li class="right" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000"> 
+                            <p>보너스 리워드 적립</p>
+                            <p class="small">당월 이용금액 100만원 이상 시</p>
+                            <p class="small">1만 포인트 추가 적립</p>
+                            <div><img src="" alr="1만 포인트 추가 적립"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 유의사항 -->
+        <div class="notice-wrap">
+            <h2>유의사항</h2>
+            <li><em>-</em>행사 기간 직전 6개월(2022.9.1 ~ 2023.2.28) 내 결제 이력은 본인 명의 개인 신용카드 전체(대상카드 포함)의 모든 현대카드 결제 이력을 의미함</li>
+            <li><em>-</em>행사 기간 직전 6개월(2022.9.1 ~ 2023.2.28) 내 결제 이력은 본인 명의 개인 신용카드 전체(대상카드 포함)의 모든 현대카드 결제 이력을 의미함</li>
+            <li><em>-</em>신규 회원 웰컴 캐시백 이벤트 및 현대카드의 다른 이용유도 이벤트와 중복 제공 불가하며, 복수 이벤트에 응모한 경우 최종 응모 기준으로 혜택 적용(혜택 선택 불가)</li>
+            <li><em>-</em>응모 시 입력한 휴대전화번호와 혜택 제공 시점 현대카드에 등록된 휴대전화번호가 다를 경우 혜택 제공 불가</li>
+            <li><em>-</em>혜택 지급 시점까지 이용 가능한 대상카드 보유 시, 혜택 제공(혜택 지급 시점까지 대상카드 해지/정지 및 대상카드를 타카드로 교체한 경우, 혜택 제공 불가)</li>
+            <li><em>-</em>혜택 제공 일정은 당사 또는 신청인 사정에 의해 상이할 수 있음</li>
+            <li><em>-</em>대상카드(VISA 브랜드) 외 기타 국내외겸용/국내전용 카드의 경우 혜택 제공 불가</li>
+            <li><em>-</em>응모 후, 대상카드로 2023.3.1 ~ 4.15까지 100만원 이상 이용 시 20만 백화점 모바일 상품권 제공</li>
+            <li><em>-</em>20만 백화점 모바일 상품권(5만원권 x 4매)</li>
+            <li><em>-</em>응모 후, 이용 조건 충족 시 2023년 5월 말일 경 모바일 상품권 제공</li>
+            <li><em>-</em>모바일 상품권은 현대카드에 등록된 본인 휴대전화번호로 발송 예정</li>
+            <li><em>-</em>더 핑크 트라이브(the Pink_TRIBE) 혜택</li>
+            <li><em>-</em>the Pink 회원을 위한 특별한 전용 혜택</li>
+            <li><em>-</em>the Pink 회원의 럭셔리 라이프 스타일에 적합한 할인, 특전, 상품 등을 큐레이션하여 제공</li>
+            <li><em>-</em>서비스 제공 기간 : 2022.10.1 ~ 2023.3.31</li>
+            <li><em>-</em>기타 자세한 사항과 유의사항은 현대카드 홈페이지 및 앱에서 확인</li>
+            <li><em>-</em>현대카드 홈페이지 : 로그인 > 나만의 혜택 > the Pink</li>
+            <li><em>-</em>현대카드 앱 : 로그인 > 상단 혜택 > the Pink_TRIBE</li>
+            <li><em>-</em>일정 기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+            <li><em>-</em>신용카드 발급이 부적정(개인신용평점 낮음, 연체금 보유 등)한 경우 카드 발급이 제한될 수 있습니다.</li>
+            <li><em>-</em>카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환합니다.</li>
+            <li><em>-</em>금융소비자는 금소법 제 19조 제 1항에 따라 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있으며, 그 설명을 듣고 충분히 이해한 후 거래하시기 바랍니다.</li>
+            <li><em>-</em>자세한 내용 및 이용 조건은 카드 신청 전 현대카드 홈페이지 및 금융상품설명서, 약관을 참고하시기 바랍니다.</li>
+            <li><em>-</em>여신금융협회 심의필 제2023-C1h-01717호(2023-02-27 ~ 2024-02-26)</li>
+        </div>
+
+        <div class="btn-wrap">
+            <ul>
+                <li class="btn-chk">
+                    <a href="" alt="응모내역 확인하기">응모내역 확인하기</a>
+                </li>
+                <li class="btn-apply">
+                    <a href="" alt="응모하기">응모하기</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 하단 버튼 -->
+        <div class="btn-wrap">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showAlert();">응모내역</a></li>
+                <li><a href="javascript:void(0);" onclick="showAlert();">응모하기</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contInfo">
+        <a href="javascript:void(0);" onclick="closeInfo();"></a>
+        <div class="info-wrap">
+            <ul>
+                <li class="card01">
+                    <div class="card-img"><img src="/Users/jisu/포트폴리오/img/card01.png" alt="M Fluffy"></div>
+                    <p class="name-txt">M Fluffy</p>
+                    <p class="info-txt">부풀어오르는 풍선을 모티브로 한 M을 플레이트에 담았다.<br/>각도에 따라 다르게 반사되는 면들이 마치 입체로 움직이는 것 같은 생동감을 준다.</p>
+                </li>
+                <li class="card02">
+                    <div class="card-img"><img src="/Users/jisu/포트폴리오/img/card02.png" alt="M Charger"></div>
+                    <p class="name-txt">M Charger</p>
+                    <p class="info-txt">부풀어오르는 풍선을 모티브로 한 M을 플레이트에 담았다.<br/>각도에 따라 다르게 반사되는 면들이 마치 입체로 움직이는 것 같은 생동감을 준다.</p>
+                </li>
+                <li class="card03">
+                    <div class="card-img"><img src="/Users/jisu/포트폴리오/img/card03.png" alt="M Steel"></div>
+                    <p class="name-txt">M Steel</p>
+                    <p class="info-txt">부풀어오르는 풍선을 모티브로 한 M을 플레이트에 담았다.<br/>각도에 따라 다르게 반사되는 면들이 마치 입체로 움직이는 것 같은 생동감을 준다.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".contWrap").addClass("active");
+
+        AOS.init({
+            easing: 'ease-out-in',
+            duration: 650
+        });
+    });//ready
+
+    function showAlert() {
+        alert("응모가 완료되었습니다!");
+     }
+
+     function showInfo(no) {
+        $(".contInfo").addClass("on");
+        $(".contInfo .card0"+no).addClass("on");
+     }
+     function closeInfo(){
+        $(".contInfo").removeClass("on");
+        $(".contInfo li").removeClass("on");
+     }
+
+</script>
+</html>
